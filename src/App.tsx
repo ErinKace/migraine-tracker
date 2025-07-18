@@ -4,10 +4,12 @@ import Home from './pages/Home'
 import Journal from './pages/journal/Journal'
 import Login from './pages/login/Login'
 import Insights from './pages/insights/Insights'
+import Navbar from './components/Navbar'
 
 function App() {
 
   return (<div>
+    <Navbar/>
     <main>
       <Routes>
         <Route path="/" element={<Home/>}/>
