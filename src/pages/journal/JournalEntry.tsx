@@ -4,7 +4,8 @@ function JournalEntry(props: {journal: JournalEntry}) {
     let entry: JournalEntry = props.journal;
 
     return <div className="Journal-Details">
-        <h1>Journal Entry for {entry.journalDate.toDateString()}</h1>
+        <h2>Journal Entry for {entry.journalDate.toDateString()}</h2>
+        <p>{entry.notes}</p>
     </div>
 }
 
