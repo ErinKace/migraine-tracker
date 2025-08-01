@@ -9,6 +9,9 @@ function JournalCard(props: {journal: JournalEntry}) {
     let entry = props.journal;
 
     return <div onClick={goToDetails}>
-        <h3>{entry.journalDate.getDate()}</h3>
+        <h3>{entry.migraineNum}</h3>
+        <h3>{entry.migraineStart.toDateString()}</h3>
     </div>
 }
+
+export default JournalCard;
