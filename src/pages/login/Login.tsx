@@ -3,6 +3,7 @@ import { useState, type SyntheticEvent } from "react";
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    let newUser: boolean = false;
 
     const handleSubmit = (event: SyntheticEvent) => {
         event.preventDefault();
@@ -26,6 +27,10 @@ function Login() {
             </label>
             <button type="submit" className="primary">Submit</button>
         </form>
+        <div>
+            <h3>Register for a new account.</h3>
+        </div>
+       (newUser?) <button></button>
     </div>)
 }
 
