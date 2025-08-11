@@ -11,7 +11,7 @@ function Login() {
     }
 
     return (<div>
-        <h1>Login</h1>
+        <h1>{newUser ? "Create a New Account" : "Login"}</h1>
         <form onSubmit={handleSubmit}>
             <label>Email:
                 <input 
@@ -29,8 +29,8 @@ function Login() {
         </form>
         <div>
             <h3>Register for a new account.</h3>
+            <button>{newUser ? "Login" : ""}</button>
         </div>
-       (newUser?) <button></button>
     </div>)
 }
 
