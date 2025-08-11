@@ -4,6 +4,9 @@ function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     let newUser: boolean = false;
+    const switchUserView = ()=> {
+        newUser = !newUser;
+    }
 
     const handleSubmit = (event: SyntheticEvent) => {
         event.preventDefault();
@@ -27,10 +30,17 @@ function Login() {
             </label>
             <button type="submit" className="primary">Submit</button>
         </form>
+        {newUser ? 
         <div>
-            <h3>Register for a new account.</h3>
-            <button>{newUser ? "Login" : ""}</button>
+            <h3>Already have an account?</h3>
+            <button onClick={switchUserView}>Log In</button>
+        </div> :
+                <div>
+            <h3>Don't have an account yet?</h3>
+            <button onClick={switchUserView}>Register Now</button>
         </div>
+        }
+
     </div>)
 }
 
