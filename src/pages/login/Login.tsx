@@ -3,10 +3,7 @@ import { useState, type SyntheticEvent } from "react";
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    let newUser: boolean = false;
-    const switchUserView = ()=> {
-        newUser = !newUser;
-    }
+    const [isNewUser, setIsNewUser] = useState(false);
 
     const handleSubmit = (event: SyntheticEvent) => {
         event.preventDefault();
@@ -14,7 +11,7 @@ function Login() {
     }
 
     return (<div>
-        <h1>{newUser ? "Create a New Account" : "Login"}</h1>
+        <h1>{isNewUser ? "Create a New Account" : "Log In"}</h1>
         <form onSubmit={handleSubmit}>
             <label>Email:
                 <input 
@@ -30,14 +27,14 @@ function Login() {
             </label>
             <button type="submit" className="primary">Submit</button>
         </form>
-        {newUser ? 
+        {isNewUser ? 
         <div>
             <h3>Already have an account?</h3>
-            <button onClick={switchUserView}>Log In</button>
+            <button onClick={()=> setIsNewUser(!isNewUser)}>Log In</button>
         </div> :
                 <div>
             <h3>Don't have an account yet?</h3>
-            <button onClick={switchUserView}>Register Now</button>
+            <button onClick={()=>setIsNewUser(!isNewUser)}>Register Now</button>
         </div>
         }
 
