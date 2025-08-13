@@ -1,11 +1,10 @@
-import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home'
 import Journal from './pages/journal/Journal'
 import Login from './pages/login/Login'
 import Insights from './pages/insights/Insights'
 import Navbar from './components/Navbar'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
