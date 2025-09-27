@@ -1,4 +1,4 @@
-import type { JournalEntry } from "./JournalEntry.Model"
+import type { JournalEntry } from "../../models/JournalEntry.Model"
 
 function JournalEntry(props: {journal: JournalEntry}) {
     let entry: JournalEntry = props.journal;
