@@ -5,6 +5,7 @@ import Journal from './pages/journal/Journal'
 import Login from './pages/login/Login'
 import Insights from './pages/insights/Insights'
 import Navbar from './components/Navbar'
+import JournalForm from './pages/journal/JournalForm';
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
         <Route path="/journal" element={<Journal/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/insights" element={<Insights/>}/>
+        <Route path="/journal/new-entry" element={<JournalForm/>}/>
       </Routes>
     </main>
   </div>)

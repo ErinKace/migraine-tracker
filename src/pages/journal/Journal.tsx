@@ -7,6 +7,7 @@ function Journal() {
 
     return <div>
         <h1>Journal</h1>
+        <button>New Entry</button>
         <div> {journalList.map((journal)=> (
             <JournalCard journal={journal} key={journal.id}/>
         ))}</div>
